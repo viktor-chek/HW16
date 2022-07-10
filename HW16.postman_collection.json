@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "e16e0ee5-8463-4a00-a2fd-aa8bbcfcd3c5",
+		"name": "HW16",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20932139"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:5000/users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"first_name\": \"Виктор\",\r\n        \"last_name\": \"Чекушкин\",\r\n        \"age\": 24,\r\n        \"email\": \"vitek9500@mail.ru\",\r\n        \"role\": \"customer\",\r\n        \"phone\": \"9100070450\"  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					]
+				},
+				"description": "POST запрос на добавление данных в БД, таблица user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/users/31",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"first_name\": \"Владимир\",\r\n        \"last_name\": \"Путин\",\r\n        \"age\": 69,\r\n        \"email\": \"putin9500@mail.ru\",\r\n        \"role\": \"customer\",\r\n        \"phone\": \"9100000001\"  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/users/31",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"31"
+					]
+				},
+				"description": "PUT запрос на обновление данных по добавленному ранее user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/users/31",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/users/31",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"31"
+					]
+				},
+				"description": "DELETE запрос на добавленного раннее user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/orders",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n\"name\": \"Съесть мороженку\", \r\n\"description\": \"Сходить в магазин, купить мороженое 'пломбир' и съесть его вкусно вкусно\", \r\n\"start_date\": \"02/08/2023\", \"end_date\": \"03/18/2037\", \r\n\"address\": \"4759 William Haven Apt. 19\", \r\n\"price\": 12, \r\n\"customer_id\": 7, \r\n\"executor_id\": 14\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/orders",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"orders"
+					]
+				},
+				"description": "POST запрос на создание order"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/orders/50",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n\"name\": \"Выкинуть обёртку от мороженого\", \r\n\"description\": \"Выбросить в мусортку обёртку от мороженого. Намыть руки\", \r\n\"start_date\": \"02/08/2023\", \"end_date\": \"03/18/2037\", \r\n\"address\": \"4759 William Haven Apt. 19\", \r\n\"price\": 0, \r\n\"customer_id\": 9, \r\n\"executor_id\": 4\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/orders/50",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"orders",
+						"50"
+					]
+				},
+				"description": "Обновление ранее добавленного order"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/orders/50",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/orders/50",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"orders",
+						"50"
+					]
+				},
+				"description": "DELETE запрос на ранее добавленный order"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/offers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"order_id\": 32, \r\n\"executor_id\": 15\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/offers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"offers"
+					]
+				},
+				"description": "POST запрос на добавление offer"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/offers/70",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"order_id\": 21, \r\n\"executor_id\": 67\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/offers/70",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"offers",
+						"70"
+					]
+				},
+				"description": "PUT запрос на обновление добавленного offer"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/offers/70",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/offers/70",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"offers",
+						"70"
+					]
+				},
+				"description": "DELETE запрос на удаление offer"
+			},
+			"response": []
+		}
+	]
+}
